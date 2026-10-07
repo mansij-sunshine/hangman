@@ -1,0 +1,76 @@
+html, body{
+  display:flex;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.mainbody{
+  background-image: url('../assets/images/background-desktop.svg');
+  width:100vw;
+  max-width:1440px;
+  height:100vh;
+  max-height: 1024px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.startblock{
+  height: 100%;
+  width: 100%;
+  max-height: 500px;
+  max-width:592px;
+  background-image: url('../assets/images/background-container.svg');
+}
+
+.start{
+  display:flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-height: 500px;
+  max-width:592px;
+  gap:20px;
+}
+
+.logospan{
+  background-image: url('../assets/images/logo.svg');
+  width:40vw;
+  height: 25vh;
+  max-width: 373px;
+  max-height: 180px;
+  margin-top: -10vh;
+}
+
+.playbutton{
+  background-image: url('../assets/images/play.svg');
+  width:40vw;
+  height: 22.5vh;
+  max-width: 200px;
+  max-height: 200px;
+  margin-top:4vh;
+}
+.playbutton:hover{
+  background-image: url('../assets/images/play-active.svg');
+}
+.instructions{
+background-image: url('../assets/images/howtoplay-default.svg');
+  width:40vw;
+  height: 20vh;
+  max-width: 261px;
+  max-height: 62px;
+  margin-top:4vh;
+}
+
+@media(max-width: 1024px){
+
+}
+
+@media(max-width: 767px){
+  
+}
