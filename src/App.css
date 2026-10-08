@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'MouseMemoirsRegular';
+  src: url(../assets/fonts/MouseMemoirs-Regular.ttf)
+}
+
 html, body{
   display:flex;
   justify-content: center;
@@ -57,6 +62,7 @@ html, body{
 }
 .playbutton:hover{
   background-image: url('../assets/images/play-active.svg');
+  cursor:pointer;
 }
 .instructions{
 background-image: url('../assets/images/howtoplay-default.svg');
@@ -65,6 +71,11 @@ background-image: url('../assets/images/howtoplay-default.svg');
   max-width: 261px;
   max-height: 62px;
   margin-top:4vh;
+}
+
+.instructions:hover{
+  background-image: url('../assets/images/howtoplay-active.svg');
+  cursor:pointer;
 }
 
 @media(max-width: 1024px){

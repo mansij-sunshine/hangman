@@ -1,0 +1,62 @@
+.allCategories{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1200px;
+    height:350px;
+    gap:15px;
+    row-gap: 15px;
+    justify-content: center;
+}
+.category{
+    width: 300px;
+    height: 148px;
+    background-size:contain;
+    max-height: 30vh;
+    max-width: 40vw;
+    background-image: url('../assets/images/default-category.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    font-family:"MouseMemoirsRegular";
+    font-size:48px;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.category:hover{
+    background-image: url('../assets/images/active-category.svg');
+     cursor:pointer;
+}
+
+.categorymain{
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    margin-bottom:100px;
+    margin-left:130px;
+    height:100px;
+    width:1200px;
+    max-width:1000px;
+    gap:11rem;
+}
+.categorymain>span{
+    background-image: url('../assets/images/back-default.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size:contain;
+    width: 60px;
+    height:60px;
+}
+.categorymain>span:hover{
+    background-image: url('../assets/images/back-active.svg');
+    cursor:pointer;
+}
+.categorymain>p{
+    font-family: 'MouseMemoirsRegular';
+    font-size: 100px;
+    line-height: 1.2;
+    background-image: linear-gradient(#67B6FF,#FFFFFF);
+    color:transparent;
+    background-clip: text;
+}

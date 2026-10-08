@@ -1,0 +1,45 @@
+.categorymain{
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    margin-bottom:100px;
+    margin-left:130px;
+    height:100px;
+    width:1200px;
+    max-width:1000px;
+    gap:11rem;
+}
+
+.helpdetails{
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+}
+.helpdetails>div{
+    width: 16rem;
+    height: 20rem;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+    padding:4rem 2rem;
+}
+.helpdetails>div>p:first-child{
+    font-family: "MouseMemoirsRegular";
+    font-size: 88px;
+    line-height: 1.2px;
+    color: #2463FF;
+}
+.helpdetails>div>p:nth-child(2){
+    font-family: "MouseMemoirsRegular";
+    font-size: 48px;
+    color:#261676;
+}
+.helpdetails>div>p:nth-child(3){
+    font-family: "MouseMemoirsRegular";
+    font-size: 26px;
+    color:#887DC0;
+    margin-top:-2rem;
+    text-align: center;
+}
