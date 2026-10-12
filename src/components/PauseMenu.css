@@ -1,0 +1,75 @@
+
+.mainpausemenu{
+    background-image: url("../../assets/images/pause-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:30%;
+    height:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; 
+    position: fixed; 
+    top: 25%;
+    left: 35%;
+    right: 0;
+    bottom: 0;
+}
+
+.mainpausemenu > div{
+    background-image: url('../../assets/images/button-default.svg');
+    width:40vw;
+    height: 20vh;
+    max-width: 261px;
+    max-height: 62px;
+    color:white;
+    font-family: "MouseMemoirsRegular";
+    font-size: 32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:1rem;
+    cursor:pointer;
+}
+
+.mainpausemenu>div:hover{
+    background-image: url('../../assets/images/button-active.svg');
+}
+
+.overlay{
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+   background-color: rgba(0, 0, 0, 0.5);  
+   z-index: 0; 
+}
+
+.mainpausemenu>span{
+    font-family: 'MouseMemoirsRegular';
+    font-size: 136px;
+    line-height: 1.2;
+    font-weight:800;
+    letter-spacing: -5px;
+    -webkit-text-stroke: 5px #243041;
+    color:transparent;
+    background: linear-gradient(#67B6FF,#FFFFFF);
+    background-clip: text;
+    margin-top:-9rem;
+    margin-bottom: 2rem;
+}
+
+.mainpausemenu>div:nth-child(4){
+    display:flex;
+    justify-content: center;
+    background-image: url('../../assets/images/quit-default.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.mainpausemenu>div:nth-child(4):hover{
+    background-image: url('../../assets/images/quit-active.svg');
+}

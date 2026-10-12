@@ -1,0 +1,18 @@
+.progressbar{
+    height: 20px;
+    width: 150px;
+    border-radius: 50px;
+    background: #fff;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.filler{
+    height:60%;
+    margin: 4%;
+    background: #261676;
+    transition: width .2s linear;
+    border-radius:inherit;
+}

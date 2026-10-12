@@ -1,0 +1,146 @@
+.burgermenu{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-bottom:100px; */
+    margin-left:90px;
+    height:100px;
+    width: 60rem;
+    max-width:60rem;
+    gap:3rem;
+}
+
+.burgermenu>span{
+    background-image: url('../assets/images/menu-default.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size:contain;
+    width: 100px;
+    height:100px;
+}
+.burgermenu>span:hover{
+    background-image: url('../assets/images/menu-active.svg');
+    cursor:pointer;
+}
+.burgermenu>p{
+    font-family: 'MouseMemoirsRegular';
+    font-size: 88px;
+    line-height: 1.2;
+    color:white;
+}
+.burgermenu>div:nth-child(3){
+    margin-left:auto;
+}
+.burgermenu>span:nth-child(4){
+    background-image: url('../assets/images/icon-heart.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+    width:50px;
+    height:50px;
+}
+
+.allLetters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 90px;
+    height: 4rem;
+    background-image: url('../assets/images/letter-default.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size:contain;
+    font-family: "MouseMemoirsRegular";
+    font-size: 48px;
+    color: #261676;
+}
+
+
+.allLetters:hover{
+    background-image: url('../assets/images/letter-active.svg');
+    color:white;
+}
+
+.letterOptions{
+    margin:auto;
+    max-width:50vw;
+    max-height:17rem;
+     height: 10rem;
+     display: flex;
+     flex-direction: row;
+     flex-wrap:wrap;
+     gap:10px;
+     margin-top:5rem;
+}
+
+.rotated{
+    transform: rotate(-90deg);
+}
+
+.correctLetters{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url('../assets/images/letter-active.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size:contain;
+    color:white;
+    width:5rem;
+    height:6rem;
+    border-radius: 10px;
+
+}
+.correctLetters>div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 1.7rem;
+    font-family: "MouseMemoirsRegular";
+    font-size: 80px;
+    transform: rotate(90deg);
+    /* margin:auto; */
+    padding:5px;
+    padding-left:25px;
+}
+
+.spaceLetter{
+    display: inline-block;
+    width:4rem;
+    height:5rem;
+    visibility: hidden;
+}
+
+.answer{
+    margin:auto;
+    max-width:65vw;
+    height: 17rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top:1.5rem;
+}
+
+.usedLetter{
+    opacity:25%;
+}
+.usedLetter:hover{
+    color: #261676;
+    background-image: url('../assets/images/letter-default.svg');
+}
+
+.maingamediv{
+    height:90vh;
+    width:80vw;
+}
+.mainanswer{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
