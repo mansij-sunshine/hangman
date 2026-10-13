@@ -35,7 +35,6 @@
     background-image: url('../assets/images/icon-heart.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-origin: content-box;
     width:50px;
     height:50px;
 }
@@ -50,8 +49,8 @@
     height: 4rem;
     background-image: url('../assets/images/letter-default.svg');
     background-repeat: no-repeat;
-    background-origin: content-box;
     background-size:contain;
+    background-position: center;
     font-family: "MouseMemoirsRegular";
     font-size: 48px;
     color: #261676;
@@ -67,7 +66,8 @@
     margin:auto;
     max-width:50vw;
     max-height:17rem;
-     height: 10rem;
+     height:auto;
+     width:auto;
      display: flex;
      flex-direction: row;
      flex-wrap:wrap;
@@ -91,7 +91,7 @@
     color:white;
     width:5rem;
     height:6rem;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 .correctLetters>div{
@@ -116,7 +116,7 @@
 }
 
 .answer{
-    margin:auto;
+    margin: 1rem 5rem;
     max-width:65vw;
     height: 17rem;
     display: flex;
@@ -138,9 +138,155 @@
 .maingamediv{
     height:90vh;
     width:80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+    max-height: 90vh;
 }
 .mainanswer{
     display:flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap:wrap;
+}
+
+
+
+
+@media(max-width: 1050px){
+    .maingamediv{
+        padding-top:5rem;
+        width:680px;
+        height:90vh;
+    }
+
+    .burgermenu{
+        margin-left:0;
+        width:100%;
+        max-width:none;
+        height:64px;
+        gap:32px;
+    }
+    .burgermenu>span{
+        width:64px;
+        height:64px;
+    }
+    .burgermenu>p{
+        font-size:48px;
+        letter-spacing:2.5px;
+    }
+    .burgermenu>span:nth-child(4){
+        width:53px;
+        height:49px;
+    }
+
+    .answer{
+        max-width:80vw;
+        height:auto;
+        margin-top:10vh; 
+        gap:16px 12px;
+        width: 75vw;
+        margin-bottom: 5vh;
+    }
+    .correctLetters{
+        width:90px;
+        height:130px;
+    }
+    .correctLetters>div{
+        font-size:64px;
+    }
+    .spaceLetter{
+        width:12px;
+        height:112px;
+    }
+
+    .letterOptions{
+        gap: 24px 6px;
+        max-width: 90vw;
+        max-height: 30vh;
+        margin-top:0;
+        height:50vh;
+        margin-bottom:10vh;
+        padding-left: 1vw;
+    }
+    .allLetters{
+        width:90px;
+        height:80px;
+        font-size:48px;
+        transform: rotate(-90deg);
+        writing-mode: sideways-rl;
+        flex-direction: column;
+
+    }
+}
+
+
+@media(max-width: 767px){
+    .maingamediv{
+        width: 90vw;
+        height:80vh;
+        padding-top:0;
+    }
+
+    .burgermenu{
+        margin-left: -0.1rem;
+        width: 90vw;
+        max-width:none;
+        height:48px;
+        gap:16px;
+    }
+    .burgermenu>span{
+        width:40px;
+        height:40px;
+    }
+    .burgermenu>p{
+        font-size:40px;
+        letter-spacing:1.75px;
+    }
+    .burgermenu>span:nth-child(4){
+        width:32px;
+        height:30px;
+    }
+
+    .answer{
+        height:auto;
+        gap:12px 8px;
+        max-width: 80vw;
+        width: 80vw;
+        margin: 5vh 2vh;
+    }
+    .correctLetters{
+        background-position: center;
+        width:50px;
+        height:66px;
+        align-items: center;
+    }
+    .correctLetters>div{
+        font-size:40px;
+        padding-left:0;
+    }
+    .spaceLetter{
+        width:20px;
+        height:66px;
+    }
+
+    .letterOptions{
+        width: 90vw;
+        max-width: 90vw;
+        max-height:none;
+        height:auto;
+        gap:24px 2px;
+        margin-top:10px;
+        margin-right:10px;  
+        justify-content: flex-start;
+        padding-left: 3vw;
+    }
+    .allLetters{
+        width:3rem;
+        background-position: center;
+        height:2.5rem;
+        font-size:40px;
+        letter-spacing:0.75px;
+    }
 }

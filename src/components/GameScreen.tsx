@@ -18,7 +18,7 @@ const GameScreen = () =>{
     const {category, selectedWord, setSelectedWord} = useContext(GameContext)
     const hasWon = !!selectedWord &&
     [...selectedWord.toLowerCase()].every(c => c === ' ' || correctLetters.includes(c))
-
+    const isSpecialChar = (ch:string) => /[^\p{L}\p{N}\s]/u.test(ch);
 
     useEffect(()=>{
         const selectedCategory:string = Object.keys(wordList.categories).find(x=>x==category.charAt(0).toUpperCase()+category.slice(1).toLowerCase()) || ''
@@ -49,7 +49,7 @@ const GameScreen = () =>{
             {word.split('').map((letter,letterIndex) => {
                 return (
                 <div key={letterIndex}>
-                    {correctLetters.includes(letter.toLowerCase()) ? <div className='rotated correctLetters'><div>{letter.toUpperCase()}</div></div>:<div className='rotated correctLetters'></div>}        
+                    {correctLetters.includes(letter.toLowerCase())||isSpecialChar(letter) ? <div className='rotated correctLetters'><div>{letter.toUpperCase()}</div></div>:<div className='rotated correctLetters'></div>}        
                   </div>
                 )
                
@@ -60,20 +60,6 @@ const GameScreen = () =>{
              </div>
      
             )})}
-            {/* {selectedWord && selectedWord.split(' ').map((word,wordIndex)=> ( 
-            <div key={wordIndex}>
-            {word.split('').map((letter,letterIndex)=>(
-            <div key={letterIndex}>
-            {correctLetters.includes(letter.toLowerCase()) && checkWin?.splice(checkWin?.indexOf(letter.toLowerCase()),1) ? <div className='rotated correctLetters'><div>{letter.toUpperCase()}</div></div>:<div className='rotated correctLetters'></div>}
-            </div>
-          
-            
-            ))}
-            {wordIndex < selectedWord.split(' ').length - 1 && <span className='spaceLetter'></span>}
-            </div>
-            ))} */}
-             {/* // (word==' ')?<span className='spaceLetter'></span>: */}
-{/* <span className='spaceLetter'></span> */}
         </div>
         <div className='letterOptions'>
            {allLetters.map((a,id)=> <div className={`allLetters ${guessedLetters.includes(a.toLowerCase())||correctLetters.includes(a.toLowerCase()) ? 'usedLetter':''}`} key={id} onClick={()=>{

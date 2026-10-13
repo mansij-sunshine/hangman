@@ -16,3 +16,18 @@
     transition: width .2s linear;
     border-radius:inherit;
 }
+
+
+@media(max-width: 1024px){
+    .progressbar{
+        width:160px;
+        height:31px;
+    }
+}
+
+@media(max-width: 767px){
+    .progressbar{
+        width:100px;
+        height:24px;
+    }
+}
