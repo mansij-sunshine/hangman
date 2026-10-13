@@ -1,4 +1,4 @@
-# Frontend Mentor - Hangman game
+
 
 ![Design preview for the Hangman game coding challenge](./preview.jpg)
 
