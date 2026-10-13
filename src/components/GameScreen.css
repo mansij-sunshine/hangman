@@ -11,7 +11,7 @@
 }
 
 .burgermenu>span{
-    background-image: url('../assets/images/menu-default.svg');
+    background-image: url('../../assets/images/menu-default.svg');
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size:contain;
@@ -19,7 +19,7 @@
     height:100px;
 }
 .burgermenu>span:hover{
-    background-image: url('../assets/images/menu-active.svg');
+    background-image: url('../../assets/images/menu-active.svg');
     cursor:pointer;
 }
 .burgermenu>p{
@@ -32,7 +32,7 @@
     margin-left:auto;
 }
 .burgermenu>span:nth-child(4){
-    background-image: url('../assets/images/icon-heart.svg');
+    background-image: url('../../assets/images/icon-heart.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width:50px;
@@ -47,7 +47,7 @@
     flex-wrap:wrap;
     width: 90px;
     height: 4rem;
-    background-image: url('../assets/images/letter-default.svg');
+    background-image: url('../../assets/images/letter-default.svg');
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
@@ -58,7 +58,7 @@
 
 
 .allLetters:hover{
-    background-image: url('../assets/images/letter-active.svg');
+    background-image: url('../../assets/images/letter-active.svg');
     color:white;
 }
 
@@ -84,7 +84,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-image: url('../assets/images/letter-active.svg');
+    background-image: url('../../assets/images/letter-active.svg');
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size:contain;
@@ -132,7 +132,7 @@
 }
 .usedLetter:hover{
     color: #261676;
-    background-image: url('../assets/images/letter-default.svg');
+    background-image: url('../../assets/images/letter-default.svg');
 }
 
 .maingamediv{
