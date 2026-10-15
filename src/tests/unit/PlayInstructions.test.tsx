@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import PlayInstructions from './PlayInstructions';
-import { GameContext } from './GameContext';
+import PlayInstructions from '../../components/PlayInstructions';
+import { GameContext } from '../../components/GameContext';
 
 describe('PlayInstructions', () => {
   const mockSetGameStatus = vi.fn();

@@ -1,8 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import PauseMenu from './PauseMenu';
-import { GameContext } from './GameContext';
+import PauseMenu from '../../components/PauseMenu';
+import { GameContext } from '../../components/GameContext';
 
 describe('PauseMenu', () => {
   const mockSetGameStatus = vi.fn();
@@ -101,7 +101,6 @@ describe('PauseMenu', () => {
   });
 
   it('stops event propagation on click', async () => {
-    const user = userEvent.setup();
     renderWithContext('Paused');
 
     const pauseMenu = screen.getByText('Paused').parentElement;

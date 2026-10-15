@@ -12,6 +12,7 @@ export default defineConfig({
       'node_modules/',
       'dist/',
       'src/tests/e2e/',
+      'src/components/',
     ],
     coverage: {
       provider: 'v8',
