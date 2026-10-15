@@ -15,19 +15,20 @@ const GameScreen = () =>{
     const [health,setHealth] = useState(8)
     const [status,setStatus] = useState('')
     
-    const {category, selectedWord, setSelectedWord} = useContext(GameContext)
+    const {category, selectedWord, setSelectedWord, setGameStatus} = useContext(GameContext)
     const hasWon = !!selectedWord &&
     [...selectedWord.toLowerCase()].every(c => c === ' ' || correctLetters.includes(c))
     const isSpecialChar = (ch:string) => /[^\p{L}\p{N}\s]/u.test(ch);
 
     useEffect(()=>{
-        const selectedCategory:string = Object.keys(wordList.categories).find(x=>x==category.charAt(0).toUpperCase()+category.slice(1).toLowerCase()) || ''
+        const selectedCategory:string = Object.keys(wordList.categories).find(x=>category.toLowerCase()==x.toLowerCase()) || ''
         const selectedCategoryWords = selectedCategory ? wordList.categories[selectedCategory as keyof typeof wordList.categories].map(w=>w.name) : undefined
+
         selectedCategoryWords && setSelectedWord(selectedCategoryWords[Math.floor(Math.random()*selectedCategoryWords.length)])
     }, [category])
-
+    
     useEffect(()=>{
-        health==0 && setStatus("You Lose")
+        health==0 && setStatus("You Lose") && setGameStatus('menu')
     },[health])
 
     useEffect(()=>{
@@ -45,18 +46,14 @@ const GameScreen = () =>{
         <div className='answer'>
            {selectedWord && selectedWord.split(' ').map((word,wordIndex)=> {  return (
             <div className='mainanswer' key={wordIndex}>
-
             {word.split('').map((letter,letterIndex) => {
                 return (
-                <div key={letterIndex}>
-                    {correctLetters.includes(letter.toLowerCase())||isSpecialChar(letter) ? <div className='rotated correctLetters'><div>{letter.toUpperCase()}</div></div>:<div className='rotated correctLetters'></div>}        
-                  </div>
+                    correctLetters.includes(letter.toLowerCase())||isSpecialChar(letter) ? <span key={letterIndex} className='correctLetters'>{letter.toUpperCase()}</span>:<span key={letterIndex} className='correctLetters'></span>       
+                 
                 )
                
                
             })}
-            {wordIndex < selectedWord.split(' ').length - 1 && (<span className='spaceLetter'></span>
-    )}
              </div>
      
             )})}

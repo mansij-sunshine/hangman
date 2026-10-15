@@ -1,3 +1,7 @@
+.pickCategory{
+    margin-top:-5rem;
+}
+
 .allCategories{
     display:flex;
     flex-direction: row;
@@ -120,11 +124,12 @@
         height:auto;
         flex-direction: column;
         flex-wrap: nowrap;
-        gap:16px;
+        gap: 1vh;
         margin-left: 0;
+        align-items: center;
     }
     .category{
-        height:77px;
+        height: 7vh;
         max-width:none;
         max-height:none;
         font-size:24px;

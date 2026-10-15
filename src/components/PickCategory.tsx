@@ -5,14 +5,15 @@ import { GameContext } from './GameContext'
 import {categories} from './constants'
 
 const PickCategory = () => {
-    const {setGameStatus, setCategory} = useContext(GameContext)
+    const {setGameStatus, setCategory, setSelectedWord} = useContext(GameContext)
     const startGame = (userCategory:{id:number,name:string})=>{
     setCategory(userCategory.name.charAt(0).toUpperCase()+userCategory.name.slice(1).toLowerCase())
     setGameStatus('inprogress')
+    setSelectedWord(undefined)
     }
 
     return (
-        <div>
+        <div className='pickCategory'>
         <div className='categorymain'>
             <span onClick={()=>setGameStatus('menu')}></span>
             <p>Pick a Category</p>

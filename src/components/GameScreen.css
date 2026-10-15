@@ -2,7 +2,6 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    /* margin-bottom:100px; */
     margin-left:90px;
     height:100px;
     width: 60rem;
@@ -73,18 +72,16 @@
      flex-wrap:wrap;
      gap:10px;
      margin-top:5rem;
+     justify-content: center;
 }
 
-.rotated{
-    transform: rotate(-90deg);
-}
 
 .correctLetters{
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    background-image: url('../../assets/images/letter-active.svg');
+    background-image: url('../../assets/images/letter-active90.svg');
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size:contain;
@@ -92,7 +89,9 @@
     width:5rem;
     height:6rem;
     border-radius: 20px;
-
+    align-items: center;
+    font-family: "MouseMemoirsRegular";
+    font-size: 80px;
 }
 .correctLetters>div{
     display:flex;
@@ -102,21 +101,16 @@
     height: 1.7rem;
     font-family: "MouseMemoirsRegular";
     font-size: 80px;
-    transform: rotate(90deg);
-    /* margin:auto; */
     padding:5px;
-    padding-left:25px;
 }
+    /* .phrase{
+        row-gap:15px;
+        column-gap: 24px; 
+    } */
 
-.spaceLetter{
-    display: inline-block;
-    width:4rem;
-    height:5rem;
-    visibility: hidden;
-}
 
 .answer{
-    margin: 1rem 5rem;
+    margin:auto;
     max-width:65vw;
     height: 17rem;
     display: flex;
@@ -125,6 +119,8 @@
     justify-content: center;
     align-items: center;
     margin-top:1.5rem;
+    row-gap:15px;
+    column-gap: 24px; 
 }
 
 .usedLetter{
@@ -148,6 +144,7 @@
     display:flex;
     justify-content: center;
     flex-direction: row;
+    gap: 0.4rem;
     flex-wrap:wrap;
 }
 
@@ -156,8 +153,7 @@
 
 @media(max-width: 1050px){
     .maingamediv{
-        padding-top:5rem;
-        width:680px;
+        width:90vw;
         height:90vh;
     }
 
@@ -182,41 +178,37 @@
     }
 
     .answer{
-        max-width:80vw;
+        max-width:90vw;
         height:auto;
-        margin-top:10vh; 
-        gap:16px 12px;
-        width: 75vw;
+        width: 85vw;
         margin-bottom: 5vh;
     }
     .correctLetters{
-        width:90px;
-        height:130px;
+        width: 4.688rem;
+        height: 6.25rem;
     }
     .correctLetters>div{
         font-size:64px;
     }
-    .spaceLetter{
-        width:12px;
-        height:112px;
+   
+    .usedLetter:hover{
+        background-image: url('../../assets/images/letter-default90.svg');
     }
-
     .letterOptions{
         gap: 24px 6px;
         max-width: 90vw;
         max-height: 30vh;
         margin-top:0;
         height:50vh;
-        margin-bottom:10vh;
+        margin-bottom:20vh;
         padding-left: 1vw;
     }
     .allLetters{
-        width:90px;
-        height:80px;
+        width: 5rem;
+        height: 6rem;
         font-size:48px;
-        transform: rotate(-90deg);
-        writing-mode: sideways-rl;
         flex-direction: column;
+        background-image: url('../../assets/images/letter-default90.svg');
 
     }
 }
@@ -227,6 +219,7 @@
         width: 90vw;
         height:80vh;
         padding-top:0;
+        margin-top: -2rem;
     }
 
     .burgermenu{
@@ -241,7 +234,7 @@
         height:40px;
     }
     .burgermenu>p{
-        font-size:40px;
+        font-size:30px;
         letter-spacing:1.75px;
     }
     .burgermenu>span:nth-child(4){
@@ -250,43 +243,44 @@
     }
 
     .answer{
-        height:auto;
-        gap:12px 8px;
-        max-width: 80vw;
-        width: 80vw;
-        margin: 5vh 2vh;
+        height: 40vh;
+        gap:12px 25px;
+        max-width: 90vw;
+        width:auto;
     }
     .correctLetters{
         background-position: center;
-        width:50px;
-        height:66px;
+        width: 40px;
+        height: 56px;
         align-items: center;
+        font-size: 2.5rem;
     }
     .correctLetters>div{
         font-size:40px;
         padding-left:0;
     }
-    .spaceLetter{
-        width:20px;
-        height:66px;
-    }
+
 
     .letterOptions{
-        width: 90vw;
+        width:auto;
         max-width: 90vw;
         max-height:none;
         height:auto;
-        gap:24px 2px;
-        margin-top:10px;
-        margin-right:10px;  
-        justify-content: flex-start;
-        padding-left: 3vw;
+        gap: 0.1rem 0.3rem;
+        margin-right:20px;  
+        justify-content: center;
+        margin-left: 0;
+    }
+    .letterOptions:last-child{
+        margin-right: 0;
     }
     .allLetters{
-        width:3rem;
+        width:2.5rem;
         background-position: center;
-        height:2.5rem;
-        font-size:40px;
+        height:4.125rem;
+        font-size:24px;
         letter-spacing:0.75px;
+        background-image: url('../../assets/images/letter-default90.svg');
     }
+
 }
