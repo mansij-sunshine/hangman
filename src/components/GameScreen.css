@@ -17,10 +17,7 @@
     width: 100px;
     height:100px;
 }
-.burgermenu>span:hover{
-    background-image: url('../../assets/images/menu-active.svg');
-    cursor:pointer;
-}
+
 .burgermenu>p{
     font-family: 'MouseMemoirsRegular';
     font-size: 88px;
@@ -56,10 +53,7 @@
 }
 
 
-.allLetters:hover{
-    background-image: url('../../assets/images/letter-active.svg');
-    color:white;
-}
+
 
 .letterOptions{
     margin:auto;
@@ -126,10 +120,7 @@
 .usedLetter{
     opacity:25%;
 }
-.usedLetter:hover{
-    color: #261676;
-    background-image: url('../../assets/images/letter-default.svg');
-}
+
 
 .maingamediv{
     height:90vh;
@@ -148,6 +139,22 @@
     flex-wrap:wrap;
 }
 
+@media (hover: hover) {
+    .burgermenu>span:hover{
+    background-image: url('../../assets/images/menu-active.svg');
+    cursor:pointer;
+}
+    .allLetters:hover{
+    background-image: url('../../assets/images/letter-active.svg');
+    color:white;
+}
+
+.usedLetter:hover{
+    color: #261676;
+    background-image: url('../../assets/images/letter-default.svg');
+}
+
+}
 
 
 
