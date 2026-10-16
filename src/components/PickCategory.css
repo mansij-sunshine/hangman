@@ -20,13 +20,15 @@
     max-width: 40vw;
     background-image: url('../../assets/images/default-category.svg');
     background-repeat: no-repeat;
-    background-origin: content-box;
     font-family:"MouseMemoirsRegular";
     font-size:48px;
     color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;   
+    background-color: transparent;
+    border:none;
+    border-radius: 2rem;
 }
 .category:hover{
     background-image: url('../../assets/images/active-category.svg');
@@ -36,7 +38,7 @@
 .categorymain{
     display: flex;
     justify-content: start;
-    align-items: baseline;
+    align-items: flex-end;
     margin-bottom:100px;
     margin-left:130px;
     height:100px;
@@ -44,15 +46,17 @@
     max-width:1000px;
     gap:11rem;
 }
-.categorymain>span{
+.categorymain>button{
     background-image: url('../../assets/images/back-default.svg');
     background-repeat: no-repeat;
-    background-origin: content-box;
     background-size:contain;
-    width: 60px;
-    height:60px;
+    background-color: transparent;
+    border:none;
+    border-radius: 7rem;
+    width: 5rem;
+    height: 5rem;
 }
-.categorymain>span:hover{
+.categorymain>button:hover{
     background-image: url('../../assets/images/back-active.svg');
     cursor:pointer;
 }
@@ -74,13 +78,13 @@
         gap:0;
         justify-content: flex-start;
     }
-    .categorymain>span{
-        margin-right:54px;
-        margin-left: 10vw;
-        margin-bottom:5%;
+    .categorymain>button{
+        margin-right: 25px;
+        margin-left: 5vw;
     }
     .categorymain>p{
         font-size:104px;
+        margin-left: 5%;
     }
 
     .allCategories{
@@ -108,13 +112,14 @@
         height:40px;
         gap:0;
     }
-    .categorymain>span{
+    .categorymain>button{
         width:40px;
         height:40px;
         margin-right:1rem;
         margin-left: 5vw;
     }
     .categorymain>p{
+        margin-left:0;
         font-size:48px;
     }
 

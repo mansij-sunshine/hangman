@@ -8,7 +8,7 @@ const PlayInstructions = () => {
     return (
         <div>
                 <div className='categorymain'>
-                    <span onClick={()=>setGameStatus('menu')}></span>
+                    <button onClick={()=>setGameStatus('menu')}></button>
                     <p>How to Play</p>
                 </div>
                 <div className='helpdetails'> 

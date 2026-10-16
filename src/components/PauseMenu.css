@@ -17,7 +17,7 @@
     bottom: 0;
 }
 
-.mainpausemenu > div{
+.mainpausemenu > button{
     background-image: url('../../assets/images/button-default.svg');
     width:40vw;
     height: 20vh;
@@ -31,9 +31,12 @@
     align-items: center;
     margin-bottom:1rem;
     cursor:pointer;
+    background-color: transparent;
+    border:none;
+    border-radius:2rem;
 }
 
-.mainpausemenu>div:hover{
+.mainpausemenu>button:hover{
     background-image: url('../../assets/images/button-active.svg');
 }
 
@@ -62,7 +65,7 @@
     margin-bottom: 2rem;
 }
 
-.mainpausemenu>div:nth-child(4){
+.mainpausemenu>button:nth-child(4){
     display:flex;
     justify-content: center;
     background-image: url('../../assets/images/quit-default.svg');
@@ -70,7 +73,7 @@
     background-position: center;
     background-size: contain;
 }
-.mainpausemenu>div:nth-child(4):hover{
+.mainpausemenu>button:nth-child(4):hover{
     background-image: url('../../assets/images/quit-active.svg');
 }
 
@@ -102,7 +105,7 @@
         -webkit-text-stroke:3px #243041;
         margin-top: -20vh;
     }
-    .mainpausemenu>div{
+    .mainpausemenu>button{
         max-width:276px;
         max-height:62px;
         font-size:24px;

@@ -71,7 +71,7 @@ test.describe('Hangman Critical Flow', () => {
     const categoryBtn = page.locator('.category', { hasText: 'ANIMALS' });
     await categoryBtn.click();
 
-    const pauseBtn = page.locator('.burgermenu span').first();
+    const pauseBtn = page.locator('.burgermenu button').first();
     await pauseBtn.click();
 
     const pauseMenu = page.locator('text=Paused');
@@ -85,7 +85,7 @@ test.describe('Hangman Critical Flow', () => {
     const categoryBtn = page.locator('.category', { hasText: 'SPORTS' });
     await categoryBtn.click();
 
-    const pauseBtn = page.locator('.burgermenu span').first();
+    const pauseBtn = page.locator('.burgermenu button').first();
     await pauseBtn.click();
 
     const continueBtn = page.locator('text=CONTINUE');
@@ -107,7 +107,7 @@ test.describe('Hangman Critical Flow', () => {
     const instructionsBtn = page.locator('.instructions');
     await instructionsBtn.click();
 
-    const backBtn = page.locator('.categorymain span').first();
+    const backBtn = page.locator('.categorymain button').first();
     await backBtn.click();
 
     const playBtn = page.locator('.playbutton');

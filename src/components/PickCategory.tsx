@@ -15,13 +15,13 @@ const PickCategory = () => {
     return (
         <div className='pickCategory'>
         <div className='categorymain'>
-            <span onClick={()=>setGameStatus('menu')}></span>
+            <button autoFocus onClick={()=>setGameStatus('menu')}></button>
             <p>Pick a Category</p>
         </div>
         <div className='allCategories'> 
-            {categories.map(category=> <div key={category.id} className='category' onClick={()=>
+            {categories.map(category=> <button key={category.id} className='category' onClick={()=>
             startGame(category)}
-            >{category.name} </div>)}
+            >{category.name} </button>)}
         </div>
     </div>
 )}

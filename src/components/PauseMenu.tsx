@@ -10,10 +10,10 @@ const PauseMenu = ({status, onClose}: PauseMenuProps)=>{
     return (
     <div className="mainpausemenu" onClick={(e) => e.stopPropagation()}>
         <span>{status}</span>
-        {status=="Paused" ? <div onClick={()=>{setGameStatus('inprogress'); onClose();}}>CONTINUE</div>:
-        <div onClick={()=>{setGameStatus('play'); onClose();}}>PLAY AGAIN!</div>}
-        <div onClick={()=>{setGameStatus('play'); onClose();}}>NEW CATEGORY</div>
-        <div onClick={()=>{setGameStatus('menu'); onClose();}}>QUIT GAME</div>
+        {status=="Paused" ? <button autoFocus onClick={()=>{setGameStatus('inprogress'); onClose();}}>CONTINUE</button>:
+        <button autoFocus onClick={()=>{setGameStatus('play'); onClose();}}>PLAY AGAIN!</button>}
+        <button onClick={()=>{setGameStatus('play'); onClose();}}>NEW CATEGORY</button>
+        <button onClick={()=>{setGameStatus('menu'); onClose();}}>QUIT GAME</button>
     </div>)
 }
 

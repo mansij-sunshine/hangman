@@ -9,11 +9,13 @@
     gap:3rem;
 }
 
-.burgermenu>span{
+.burgermenu>button{
     background-image: url('../../assets/images/menu-default.svg');
     background-repeat: no-repeat;
-    background-origin: content-box;
+    background-color: transparent;
     background-size:contain;
+    border:none;
+    border-radius:3rem;
     width: 100px;
     height:100px;
 }
@@ -47,6 +49,9 @@
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
+    background-color: transparent;
+    border:none;
+    border-radius:1rem;
     font-family: "MouseMemoirsRegular";
     font-size: 48px;
     color: #261676;
@@ -119,6 +124,11 @@
 
 .usedLetter{
     opacity:25%;
+
+}
+.allLetters:disabled{
+        pointer-events: none;
+        cursor:not-allowed;
 }
 
 
@@ -140,7 +150,7 @@
 }
 
 @media (hover: hover) {
-    .burgermenu>span:hover{
+    .burgermenu>button:hover{
     background-image: url('../../assets/images/menu-active.svg');
     cursor:pointer;
 }
@@ -171,7 +181,7 @@
         height:64px;
         gap:32px;
     }
-    .burgermenu>span{
+    .burgermenu>button{
         width:64px;
         height:64px;
     }
@@ -236,7 +246,7 @@
         height:48px;
         gap:16px;
     }
-    .burgermenu>span{
+    .burgermenu>button{
         width:40px;
         height:40px;
     }

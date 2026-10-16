@@ -96,7 +96,7 @@
             {"name": "Belgium", "selected": false},
             {"name": "Chile", "selected": false}
         ],
-        "Capital Cities": [
+        "Capitals": [
             {"name": "Tokyo", "selected": false},
             {"name": "Paris", "selected": false},
             {"name": "London", "selected": false},

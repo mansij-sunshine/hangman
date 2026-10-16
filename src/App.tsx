@@ -22,8 +22,8 @@ const [category, setCategory]=useState('')
     <div className='startblock'>
         <div className='start'>
             <span className='logospan'></span>
-            <span onClick={()=>setGameStatus('play')} className='playbutton'></span>
-            <span className='instructions' onClick={()=>setGameStatus('help')}></span>
+            <button onClick={()=>setGameStatus('play')} className='playbutton'></button>
+            <button className='instructions' onClick={()=>setGameStatus('help')}></button>
         </div>
     </div>
       }
